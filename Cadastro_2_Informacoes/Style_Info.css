@@ -1,0 +1,340 @@
+body {
+    background-color: #2C2C2C;
+  }
+  .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background-color: #1E1E1E;
+    border-radius: 52px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 1;
+  }
+  
+  .close-icon {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+  }
+  .title-box {
+    position: absolute;
+    top: 75px;
+    left: 174px;
+    width: 259.18px;
+    height: 74px;
+    color:rgb(234, 223, 223);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.4;
+  }
+  .status-box {
+    position: absolute;
+    top: 24.9px;
+    left: 10px;
+    width: 259.18px;
+    height: 74px;
+    color:rgb(234, 223, 223);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.4;
+  }
+  .campus-box {
+    position: absolute;
+    top: 140px;
+    left: 45px;
+    width: 510px;
+    height: 40px;
+    background-color: #ffffff;
+  }
+  .campus-box input {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 484px;
+    height: 20px;
+    font-size: 16px;
+    color: #595959;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    outline: none;
+  }
+
+  .curso-box {
+    position: absolute;
+    top: 220px;
+    left: 45px;
+    width: 510px;
+    height: 40px;
+    background-color: #ffffff;
+  }
+  .curso-box input {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 480px;
+    height: 20px;
+    font-size: 16px;
+    color: #595959;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    outline: none;
+  }
+
+  .turma-box {
+    position: absolute;
+    top: 300px;
+    left: 45px;
+    width: 510px;
+    height: 40px;
+    background-color: #ffffff;
+  }
+  .turma-box input {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 480px;
+    height: 20px;
+    font-size: 16px;
+    color: #595959;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    outline: none;
+  }
+
+  .ano-box {
+    position: absolute;
+    top: 380px;
+    left: 45px;
+    width: 510px;
+    height: 40px;
+    background-color: #ffffff;
+  }
+  .ano-box input {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 480px;
+    height: 20px;
+    font-size: 16px;
+    color: #595959;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    outline: none;
+  }
+
+  /*.checkbox-box {
+    position: absolute;
+    top: 440px;
+    left: 9px;
+    width: 300px;
+    height: 60px;
+    background-color: #ff000000;
+    border: 2px solid #ffffff00;
+    border-radius: 10px;
+}
+
+.checkbox-box label {
+    display: block;
+    font-size: 19px;
+    color: #6B6B6B;
+}
+
+.checkbox-box a {
+    text-decoration: none;
+    color: #6B6B6B;
+}*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat';
+}
+
+.wrapper {
+  padding: 45px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.form-group label > span {
+  color: #878686;
+}
+
+
+.radio, .checkbox {
+  cursor: pointer;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  top: 206px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+} /*caixa*/
+
+.checkbox {
+  border-radius: 0;
+}
+
+.radio:before, .checkbox:before {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 600ms ease-in-out;
+  position: absolute;
+}
+
+.checkbox:before {
+  border-radius: 0;
+  background: transparent;
+  border: 3px solid rgb(255, 255, 255);
+  border-left: 0;
+  border-top: 0;
+  width: 7px;
+  height: 12px;
+  transform: rotate(45deg);
+  top: 1px;
+}
+
+.radio:checked:before, .checkbox:checked:before {
+  opacity: 1;
+}
+
+.radio:focus, .checkbox:focus {
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+
+.form-group label {
+  
+  margin-top: 410px;
+}
+
+  .button-box {
+    position: absolute;
+    bottom: 50px;
+    top: 500px;
+    left: 200px;
+    width: 220px;
+    height: 40px;
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .button-box p {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 26px;
+    color: #ffffff;
+    margin: 0;
+  }
+  
+  
+  .button-box a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+  }
+ 
+  
+  .login-bar.slide {
+    transform: translateX(30px);
+  }
+
+ .login-bar {
+  position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% + 240px); /* Posiciona a login-bar ao lado da login-box */
+
+  width: 90px;
+  height: 270px;
+  background-color: #171717;
+  border-radius: 23px;
+  z-index: 0;
+  transition: transform 0.3s ease;
+}
+
+  .facebook-icon {
+    position: absolute;
+    top: 20px;
+    left: 35px;
+    width: 47px;
+    height: 47px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .google-icon {
+    position: absolute;
+    top: 80px;
+    left: 35px;
+    width: 47px;
+    height: 47px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .twitter-icon {
+    position: absolute;
+    top: 140px;
+    left: 35px;
+    width: 47px;
+    height: 47px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .github-icon {
+    position: absolute;
+    top: 200px;
+    left: 35px;
+    width: 47px;
+    height: 47px;
+    cursor: pointer;
+    border-radius: 50%;
+  }

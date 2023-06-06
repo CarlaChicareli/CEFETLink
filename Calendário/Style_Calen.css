@@ -1,0 +1,573 @@
+/* Define a fonte padrão do documento, seu tamanho, altura de linha e peso da fonte */
+html {
+    font-family: "Montserrat";
+    font-size: 325%;
+    line-height: 1.4;
+    /*Distancia fevereiro das semanas*/
+    font-weight: 00;
+}
+
+/* Define a altura mínima do corpo do documento e sua cor de fundo */
+body {
+    min-height: 100vh;
+    background: #2C2C2C;
+}
+
+/* Define algumas propriedades visuais para a seção principal da página */
+main {
+    max-width: max-content;
+    margin: 3em auto 0 auto;
+    padding: 1.5em;
+    border: 2px solid var(--blue-grey-200);
+    border-radius: 8px;
+    position: absolute;
+    top: 23%;
+    right: 2%;
+    transform: translateY(-50%);
+}
+
+/* Define algumas propriedades visuais para o indicador de mês */
+.month-indicator {
+    color: #ffffff;
+    text-align: left;
+    font-weight: 500;
+    font-size: 60%;
+    margin-bottom: 0.5em;
+    margin-left: 44px;
+}
+
+.month-indicator time {
+    font-size: 85%;
+}
+
+/* Define um layout em grade para a seção que exibe os dias da semana e o calendário em si */
+.day-of-week,
+.date-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+/* Define algumas propriedades visuais para a seção que exibe os dias da semana */
+.day-of-week {
+    margin-top: 1em;
+
+}
+
+/* Define algumas propriedades visuais para os dias da semana em si */
+.day-of-week>* {
+    font-size: 0.5em;
+    color: #ffffff;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    font-variant: small-caps;
+    text-align: center;
+    font-size: 0.7em;
+    margin-right: 0.6em;
+    margin-left: 0.7em;
+
+}
+
+/* Define algumas propriedades visuais para a grade que exibe os dias do mês */
+.date-grid {
+    margin-top: 0.5em;
+}
+
+/* Define a posição do primeiro dia da grade */
+.date-grid button:first-child {
+    grid-column: 6;
+}
+
+/* Define algumas propriedades visuais para cada botão de dia na grade */
+.date-grid button {
+    position: relative;
+    border: 0;
+    width: 4.5ch;
+    height: 4.5ch;
+    border-radius: 30%;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 0.6em;
+    /* aumentar ou diminuir o calendario */
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+
+/* Define algumas propriedades visuais para o botão do dia quando o mouse está sobre ele ou quando ele é focado */
+.date-grid button:hover,
+.date-grid button:focus {
+    outline: none;
+    background-color: #343434;
+    color: #ffffff;
+}
+
+/* Define algumas propriedades visuais para o botão do dia quando ele está ativo ou é selecionado */
+.date-grid button:active,
+.date-grid button.is-selected {
+    background-color: #1E1E1E;
+    color: #ffffff;
+}
+
+/* Setas esquerda e direita */
+
+.month-indicator {
+    color: #ffffff;
+    text-align: left;
+    font-weight: 500;
+    font-size: 60%;
+    margin-bottom: 0.5em;
+    margin-left: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 490px;
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    align-items: center;
+}
+
+.arrow-container img {
+    width: 60%;
+    height: auto;
+}
+
+.arrows img:last-child {
+    margin-left: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header1 {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 21%;
+    margin-right: 30%;
+    margin-top: 1%;
+}/*Minhas Agendas*/
+
+.header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 21%;
+    margin-right: 30%;
+    margin-top: 16%;
+}/*Minhas Agendas*/
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+}
+.header1 h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+
+.clubes-item {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color:#ffffff;
+    margin-left: 400px;
+    margin-right: 970px;
+}
+
+.eventos-item {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color:#ffffff;
+    margin-left: 26.4%;
+    margin-right: 30%;
+}
+
+.info3-item {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color:#ffffff;
+    margin-left: 400px;
+    margin-right: 970px;
+}
+
+.gremio-item {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color:#ffffff;
+    margin-left: 400px;
+    margin-right: 970px;
+}
+
+.aval-item {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color:#ffffff;
+    margin-left: 400px;
+    margin-right: 970px;
+}
+
+.aniver-item {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color:#ffffff;
+    margin-left: 400px;
+    margin-right: 970px;
+}
+
+.ativ-item {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color:#ffffff;
+    margin-left: 400px;
+    margin-right: 970px;
+}
+
+.trab-item {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    color:#ffffff;
+    margin-left: 400px;
+    margin-right: 970px;
+}
+
+.color-indicator {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+  body {
+    font-family: 'Montserrat';
+  }
+
+  .clubes-item {
+    padding: 10px;
+  }
+
+  .eventos-item {
+    padding: 10px;
+  }
+
+  .info3-item {
+    padding: 10px;
+  }
+
+  .gremio-item {
+    padding: 10px;
+  }
+  
+  .aval-item {
+    padding: 10px;
+  }
+
+  .aniver-item {
+    padding: 10px;
+  }
+
+  .ativ-item {
+    padding: 10px;
+  }
+
+  .trab-item {
+    padding: 10px;
+  }
+
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+  
+  .form-group label {
+    padding-left: 10px;
+    font-size: 19px;
+    cursor: pointer;
+  }
+  
+  .form-group label > span {
+    color: #ffffff;
+  }
+  
+  .form-group1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0px;
+  }
+  
+  .form-group1 label {
+    padding-left: 10px;
+    font-size: 19px;
+    cursor: pointer;
+  }
+  
+  .form-group1 label > span {
+    color: #ffffff;
+  }
+
+  .radio, .checkbox {
+    cursor: pointer;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    top: 0px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+  } /*caixa*/
+  
+  .checkbox {
+    border-radius: 0;
+    
+  }
+  
+  .radio:before, .checkbox:before {
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 600ms ease-in-out;
+    position: absolute;
+    
+  }
+  
+  .checkbox:before {
+    border-radius: 0;
+    background: transparent;
+    border: 3px solid #ffffff;
+    border-left: 0;
+    border-top: 0;
+    width: 7px;
+    height: 12px;
+    transform: rotate(45deg);
+    top: 1px;
+    
+  }
+
+  .radio:checked:before, .checkbox:checked:before {
+    opacity: 1;
+  }
+  
+  .radio:focus, .checkbox:focus {
+    box-shadow: 0 0 5px #000000;
+  }
+
+  .Comunidades {
+    margin-top: 1.42%;
+  }
+  
+  /* Estilos para os checkboxes */
+input[id="checkbox1"] {
+    border: 2.5px solid #039BE5;
+    border-radius: 4px;
+}
+
+input[id="checkbox2"] {
+    border: 2.5px solid #3F51B5;
+    border-radius: 4px;
+    
+}
+
+input[id="checkbox3"] {
+    border: 2.5px solid #009688;
+    border-radius: 4px;
+}
+
+input[id="checkbox4"] {
+    border: 2.5px solid #4285F4;
+    border-radius: 4px;
+}
+
+input[id="checkbox5"] {
+    border: 2.5px solid #D81B60;
+    border-radius: 4px;
+}
+
+input[id="checkbox6"] {
+    border: 2.5px solid #EC9C96;
+    border-radius: 4px;
+    
+}
+
+input[id="checkbox7"] {
+    border: 2.5px solid #683B4B;
+    border-radius: 4px;
+}
+
+input[id="checkbox8"] {
+    border: 2.5px solid #F498BA;
+    border-radius: 4px;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.agendas-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 59%;
+    right: 0.2%;
+  }
+
+  .comun-list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 14%;
+    right: 3.2%;
+  }
+/* estilos para os círculos */
+.circle {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 10px; /*distancia entre eles*/
+    left: 44%;
+    margin-top: 15.8%;
+    
+  }
+  
+  /* cores dos círculos */
+  .circle-red {
+    background-color: #00386B;
+    
+  }
+  
+  .circle-green {
+    background-color: #5E92B8;
+    margin-bottom: 1px; /*distancia entre eles*/
+  }
+  
+  /* estilos para as frases */
+  .phrase1 {
+    position: absolute;
+    top: 636.5px;
+    left: 650px;
+    width: 700px;
+    height: 74px;
+    color:rgb(234, 223, 223);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 70;
+    font-size: 20px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.4;
+  }
+
+  .phrase2 {
+    position: absolute;
+    top: 710px;
+    left: 630px;
+    width: 740px;
+    height: 74px;
+    color:rgb(234, 223, 223);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 70;
+    font-size: 20px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 1.4;
+  }
+
+  /* Adiciona o estilo para o círculo do dia 1 */
+button time[datetime="2010-02-01"] {
+    content: "";
+    display: block;
+    width: 1.8em;
+    height: 1.8em;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #5E92B8;
+}
+.date-grid button time[datetime="2010-02-01"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button time[datetime="2010-02-01"] {
+    content: "";
+    display: block;
+    width: 1.8em;
+    height: 1.8em;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #5E92B8;
+}
+
+  .date-grid button time[datetime="2010-02-01"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  button.circle {
+    top: -4px;
+    left: 12px;
+    width: 1.8em;
+    height: 1.8em;
+    background-color: #00386B;
+    border-radius: 50%;
+}
