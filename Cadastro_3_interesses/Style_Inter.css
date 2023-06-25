@@ -142,36 +142,6 @@ body {
   background-color: #272727;
 }
 
-.button-box {
-  position: absolute;
-  bottom: 50px;
-  top: 500px;
-  left: 200px;
-  width: 220px;
-  height: 40px;
-  border: 2px solid #FFFFFF;
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.button-box p {
-  font-family: 'Montserrat';
-  font-weight: bold;
-  font-size: 26px;
-  color: #ffffff;
-  margin: 0;
-}
-
-
-.button-box a {
-  color: #ffffff;
-  text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
-}
 
 .dont-have-account-box {
   position: absolute;
@@ -266,4 +236,33 @@ transition: transform 0.3s ease;
   height: 47px;
   cursor: pointer;
   border-radius: 50%;
+}
+.botao {
+  position: absolute;
+  bottom: 50px;
+  top: 500px;
+  left: 200px;
+  width: 220px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.botao p {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 26px;
+  margin: 0;
+}
+
+.botao a {
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 }
