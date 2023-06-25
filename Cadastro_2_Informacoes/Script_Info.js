@@ -1,49 +1,34 @@
-const loginBar = document.querySelector('.login-bar');
+const form = document.querySelector('form');
+const checkbox = document.querySelector('#checkbox1');
 
-loginBar.addEventListener('mouseover', () => {
-loginBar.classList.add('slide');
-});
+form.addEventListener('submit', async (e) => {
+  e.preventDefault(); // Impede o envio do formulário
 
-loginBar.addEventListener('mouseout', () => {
-loginBar.classList.remove('slide');
-});
-function togglePasswordVisibility() {
-    var passwordInput = document.getElementById("password-input");
-    var showPasswordButton = document.getElementById("show-password");
-    if (passwordInput.type === "password") {
-      passwordInput.type = "text";
-      showPasswordButton.textContent = "Esconder";
-    } else {
-      passwordInput.type = "password";
-      showPasswordButton.textContent = "Mostrar";
-    }
+  if (!checkbox.checked) {
+    alert('Você precisa aceitar os termos e condições.'); // Exibe uma mensagem de alerta se os termos e condições não forem aceitos
+    return;
   }
 
-const mostrarEsconderSenha = document.querySelector('.mostrar-esconder-senha');
-const inputSenha = document.querySelector('.password-box input[type="password"]');
+  // Obtenha os valores dos campos do formulário
+  const campus = form.campus.value;
+  const curso = form.curso.value;
+  const turma = form.turma.value;
+  const ano = form.ano.value;
 
-mostrarEsconderSenha.addEventListener('click', () => {
-  if (inputSenha.type === 'password') {
-    inputSenha.type = 'text';
-    mostrarEsconderSenha.src = 'mostrar.png';
-    mostrarEsconderSenha.alt = 'Mostrar senha';
-  } else {
-    inputSenha.type = 'password';
-    mostrarEsconderSenha.src = 'esconder.png';
-    mostrarEsconderSenha.alt = 'Esconder senha';
+  // Envia a solicitação para o arquivo PHP
+  const response = await fetch('Informacoes.php', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: `campus=${encodeURIComponent(campus)}&curso=${encodeURIComponent(curso)}&turma=${encodeURIComponent(turma)}&ano=${encodeURIComponent(ano)}`
+  });
+
+  // Verifica a resposta do servidor
+  const data = await response.json();
+  if (data.status === 'error') {
+    alert(data.message); // Exibe a mensagem de erro em uma caixa de diálogo
+  } else if (data.status === 'success') {
+    window.location.pathname = 'Cadastro_3_interesses/Interesses.html';
   }
 });
-
-const rewritePasswordInput = document.getElementById('rewrite-password');
-const rewritePasswordToggle = document.getElementById('rewrite-password-toggle');
-
-rewritePasswordToggle.addEventListener('click', function() {
-  if (rewritePasswordInput.type === 'password') {
-    rewritePasswordInput.type = 'text';
-    rewritePasswordToggle.src = 'mostrar.png';
-  } else {
-    rewritePasswordInput.type = 'password';
-    rewritePasswordToggle.src = 'esconder.png';
-  }
-});
-

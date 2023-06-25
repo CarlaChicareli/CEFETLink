@@ -12,10 +12,10 @@ loginBar.addEventListener('mouseout', () => {
 const interestButtons = document.querySelectorAll('.interest-item');
 
 // Adiciona um evento de clique para cada botão de interesse
+// adiciona um evento de clique para cada botão
 interestButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Adiciona ou remove a classe "selected" do elemento clicado
-        item.classList.toggle('selected');
+        button.classList.toggle('pressed'); // adiciona ou remove a classe 'pressed'
     });
 });
 
@@ -45,4 +45,9 @@ modaBtn.addEventListener('click', () => {
   modaBtn.classList.toggle('pressed', modaPressed);
 });
 
-
+interestButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('pressed'); // Adiciona ou remove a classe 'pressed'
+    });
+  });
+  

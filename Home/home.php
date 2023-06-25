@@ -1,35 +1,12 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $email = $_POST['email'];
-  $password = $_POST['password'];
-  
-  // Validação do email
-  if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !strpos($email, '@gmail.com')) {
-    $response = array(
-      'status' => 'error',
-      'message' => 'Digite um e-mail válido do Gmail'
-    );
-    echo json_encode($response);
-    return;
-  }
-
-  // Verifica se a senha contém pelo menos uma letra e um número
-  if (!preg_match('/[A-Za-z]/', $password) || !preg_match('/\d/', $password)) {
-    $response = array(
-      'status' => 'error',
-      'message' => 'A senha deve conter pelo menos uma letra e um número'
-    );
-    echo json_encode($response);
-    return;
-  }
-
-  // Login bem-sucedido
-
+  $comentario2 = $_POST['comentario2'];
+  $comentario3 = $_POST['comentario3'];
 
   // Dados para enviar para a planilha
   $sheetData = array(
-    'Email' => $email,
-    'Senha' => $password
+    'comentario2' => $comentario2,
+    'comentario3' => $comentario3
   );
 
   // Converte os dados em formato JSON

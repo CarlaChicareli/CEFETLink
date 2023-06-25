@@ -201,7 +201,7 @@ body {
     cursor: pointer;
   }
   
-  .button-box {
+  .botao {
     position: absolute;
     bottom: 50px;
     top: 500px;
@@ -217,7 +217,7 @@ body {
     font-weight: bold;
   }
   
-  .button-box p {
+  .botao p {
     font-family: 'Montserrat';
     font-weight: bold;
     font-size: 26px;
@@ -226,7 +226,7 @@ body {
   }
   
   
-  .button-box a {
+  .botao a {
     color: #ffffff;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;

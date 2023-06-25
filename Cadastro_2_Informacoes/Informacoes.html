@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Style_Info.css">
+    <link rel="icon" href="Imagens/favicon.ico" type="image/x-icon"> <!--Faz um link ao favicon-->
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -20,34 +22,32 @@
             <div class="title-box">
                 INFORMAÇÕES CEFET
             </div>
-            <div class="campus-box">
-                <input type="campus" placeholder="Campus" style="background-color: #ffffff;">
-            </div>
-            <div class="curso-box">
-                <input type="curso" placeholder="Curso" style="background-color: #ffffff;">
-            </div>
-            <div class="turma-box">
-                <input type="turma" placeholder="Turma" style="background-color: #ffffff;">
-            </div>
-            <div class="ano-box">
-                <input type="ano" placeholder="Ano" style="background-color:
-                        #ffffff;">
-            </div>
-
-            <div class="wrapper">
-                <div class="form-group">
-                    <input class="checkbox" id="checkbox1" type='checkbox' />
-                    <label for="checkbox1"><span>Aceitar</span> <a href="#"
-                            style="color: #878686; font-weight: bold;">Termos e condições</a></label>
+            <form action="Informacoes.php" method="POST">
+                <div class="campus-box">
+                    <input type="campus" name="campus" placeholder="Campus" style="background-color: #ffffff;">
                 </div>
-            </div>
+                <div class="curso-box">
+                    <input type="curso" name="curso" placeholder="Curso" style="background-color: #ffffff;">
+                </div>
+                <div class="turma-box">
+                    <input type="turma" name="turma" placeholder="Turma" style="background-color: #ffffff;">
+                </div>
+                <div class="ano-box">
+                    <input type="ano" name="ano" placeholder="Ano" style="background-color:
+                            #ffffff;">
+                </div>
 
-
-
-            <div class="button-box">
-                <a
-                    href="../Cadastro_3_interesses/Interesses.html">AVANÇAR</a>
-            </div>
+                <div class="wrapper">
+                    <div class="form-group">
+                        <input class="checkbox" id="checkbox1" type='checkbox' />
+                        <label for="checkbox1"><span>Aceitar</span> <a href="#"
+                                style="color: #878686; font-weight: bold;">Termos e condições</a></label>
+                    </div>
+                </div>
+                <div class="button-box">
+                    <button type="submit" class="botao">AVANÇAR</button>
+                  </div>
+            </form>
         </center>
     </div>
 

@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Style_cad.css">
+    <link rel="icon" href="Imagens/favicon.ico" type="image/x-icon"> <!--Faz um link ao favicon-->
+    <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
   </head>
   <body>
 
@@ -20,33 +22,28 @@
         <div class="title-box">
           CRIAR NOVA CONTA
         </div>
-        <div class="nome-box">
-          <input type="nome" name="nome" placeholder="Nome" style="background-color: #ffffff;">
-        </div>
-        <div class="sobrenome-box">
-            <input type="sobrenome" name="sobrenome" placeholder="Sobrenome" style="background-color: #ffffff;">
-        </div>
-        <div class="email-box">
-            <input type="email" name="email" placeholder="Email" style="background-color: #ffffff;">
-        </div>
-        <div class="password-box">
-            <input type="password" name="senha" placeholder="Senha">
-            <img src="Imagens/esconder.png" alt="Esconder senha" class="mostrar-esconder-senha">
-        </div>          
-        <div class="rewrite-password-box">
-            <input id="rewrite-password" type="password" name="rewrite_senha" placeholder="Reescreva sua senha">
-            <img src="Imagens/esconder.png" alt="Esconder senha" class="mostrar-esconder-senha" id="rewrite-password-toggle">
+        <form action="cadastro.php" method="POST">
+          <div class="nome-box">
+            <input type="text" name="nome" placeholder="Nome" style="background-color: #ffffff;">
           </div>
-          
-        <form action="processar_formulario.php" method="POST">
-          <!-- Seus elementos de formulário aqui -->
-          <!-- ... -->
-          
+          <div class="sobrenome-box">
+              <input type="sobrenome" name="sobrenome" placeholder="Sobrenome" style="background-color: #ffffff;">
+          </div>
+          <div class="email-box">
+              <input type="email" name="email" placeholder="Email" style="background-color: #ffffff;">
+          </div>
+          <div class="password-box">
+            <input type="password" name="password" placeholder="Senha">
+            <img src="Imagens/esconder.png" alt="Esconder senha" class="mostrar-esconder-senha">
+          </div>                 
+          <div class="rewrite-password-box">
+              <input id="rewrite-password" type="password" name="rewrite_senha" placeholder="Reescreva sua senha">
+              <img src="Imagens/esconder.png" alt="Esconder senha" class="mostrar-esconder-senha" id="rewrite-password-toggle">
+          </div>
           <div class="button-box">
-                <a href="../Cadastro_2_Informacoes/Informacoes.html">AVANÇAR</a>
+            <button type="submit" class="botao">AVANÇAR</button>
           </div>
         </form>
-        
       </center>
     </div>
 

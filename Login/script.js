@@ -12,6 +12,7 @@ loginBar.classList.remove('slide');
   form.addEventListener('submit', async (e) => {
     e.preventDefault(); // Impede o envio do formulário
 
+    // Obtenha os valores dos campos do formulário
     const email = form.email.value;
     const password = form.password.value;
 
@@ -32,9 +33,10 @@ loginBar.classList.remove('slide');
     // Verifica a resposta do servidor
     const data = await response.json();
     if (data.status === 'error') {
-      alert(data.message); // Exibe a mensagem de erro em uma caixa de diálogo
+      alert(data.message); // Exibe a mensagem de erro em uma caixa de diálogo  
     } else if (data.status === 'success') {
-      // Código adicional para o caso de login bem-sucedido
-      // ...
+      window.location.pathname = 'Home/home.html';
     }
   });
+
+  
