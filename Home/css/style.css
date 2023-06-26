@@ -1,0 +1,319 @@
+/* Stle reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:#fff;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat';
+}
+
+html, body {
+    height: 100%;
+    background-color: #1E1E1E;
+    margin-right: 0;
+    padding-right: 0;
+    overflow-x: hidden;
+}
+/* Fonts */
+
+/* Montserrat Regular */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../Assets/Montserrat/static/Montserrat-Regular.ttf');
+}
+
+/* Montserrat Bold */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../Assets/Montserrat/static/Montserrat-Bold.ttf');
+    font-weight: bold;
+}
+
+/* Main Containers */
+.main-flex-container {
+    max-width: 1350px;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
+.menu-flex-container {
+    flex: 1 0 22%;
+    height: 100%;
+    position: sticky;
+    top: 0;
+    background: #1E1E1E;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.content-flex-container {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 3 0 78%;
+    align-items: center;
+    justify-content: center;
+    background: #2C2C2C;
+    
+}
+
+/* Perfil */
+
+.perfil {
+    display: flex;
+    max-width: 55%; 
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    box-sizing: border-box;
+}
+
+.foto-perfil {
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 10%;
+    overflow: hidden;
+}
+
+.perfil * {
+    color: #fff;
+}
+
+.foto-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Informações do perfil */
+
+.informacoes h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 110%;
+    margin: 1em 0;
+}
+
+.informacoes-seguidores {
+    display: flex; 
+    flex-direction: row; 
+}
+
+.seguindo,
+.seguidores {
+    flex: 1;
+    text-align: center;
+}
+
+.seguindo p:first-child,
+.seguidores p:first-child {
+    font-size: 100%;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.seguindo p:last-child,
+.seguidores p:last-child{
+    font-size: 70%;
+}
+
+.border {
+    width: 1px;
+    background-color: #ffffff;
+    margin: 0 10px;
+  }
+  
+
+/* Menu de navegação*/
+
+.nav-items {
+    margin-top: 5%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding-right: 70px;
+}
+
+.nav-items:hover{
+    border-right: 3px solid #fff;
+}
+
+.nav-icon{
+    width: 25px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.current-page{
+    font-weight: bold;
+    border-right: 3px solid #fff;
+}
+
+/* Conteúdo  principal*/
+
+.post{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-self: center;
+    justify-content: center;
+    height: auto;
+    margin-bottom: 2%;
+    
+}
+
+.post h1{
+    font-weight: bold;
+    margin: 2%;
+}
+
+.autor-post{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.autor-foto{
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin-right: 2%;
+    overflow: hidden;
+
+}
+
+.autor-foto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conteudo-post{
+    text-align: justify;
+}
+
+.conteudo-icons{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.conteudo-icons-box{
+    display: flex;
+    align-items: center;
+}
+.conteudo-icons-box-aplausos{
+    display: flex;
+    align-items: center;
+}
+
+.conteudo-icons-icon{
+    margin-right: 10px;
+}
+
+.conteudo-icons-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  #aplausos-icon {
+    width: 47px;
+    height: 47px;
+}
+
+.adicionar_comentario1{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.adicionar_button1{
+    margin-right: 10px;
+}
+.adicionar_button1 {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.comentario-input1 {
+    background-color: #595959;
+    border-radius: 7px;
+    padding: 5px;
+    width: 700px;
+    height: 40px;
+    padding-left: 20px;
+}
+
+.comentario-input1::placeholder {
+    color: #ffffff;
+    font-family: 'Montserrat';
+
+}
+
+.adicionar_comentario2{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.adicionar_button2{
+    margin-right: 10px;
+}
+.adicionar_button2 {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.comentario-input2 {
+    background-color: #595959;
+    border-radius: 7px;
+    padding: 5px;
+    width: 700px;
+    height: 40px;
+    padding-left: 20px;
+}
+
+.comentario-input2::placeholder {
+    color: #ffffff;
+    font-family: 'Montserrat';
+
+}
+
+.adicionar_comentario3{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.adicionar_button3{
+    margin-right: 10px;
+}
+.adicionar_button3 {
+    margin-right: 10px;
+    cursor: pointer;
+}
+.comentario-input3 {
+    background-color: #595959;
+    border-radius: 7px;
+    padding: 5px;
+    width: 700px;
+    height: 40px;
+    padding-left: 20px;
+}
+
+.comentario-input3::placeholder {
+    color: #ffffff;
+    font-family: 'Montserrat';
+
+}
